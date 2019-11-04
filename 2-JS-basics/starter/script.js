@@ -108,3 +108,24 @@ if (hisAge < 13) {
 } else {
   console.log(hisName + " is an adult");
 }
+
+let birthCall = "Robbie";
+let currentAge = "21";
+
+currentAge >= 21
+  ? console.log(birthCall + " can drink booze")
+  : console.log(birthCall + " can not drink");
+
+let drinker = currentAge >= 21 ? "beer" : "juice";
+console.log(drinker);
+
+let currentJob = "teacher";
+switch (currentJob) {
+  case "teacher":
+    console.log(birthCall + " teaches");
+    break;
+
+  case "driver":
+    console.log(birthCall + " drives");
+    break;
+}
