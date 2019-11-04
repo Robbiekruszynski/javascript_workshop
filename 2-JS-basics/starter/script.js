@@ -193,4 +193,17 @@ const calculateAge = birthYear => {
 };
 
 let getAge = calculateAge(1989);
+let ageJohn = calculateAge(1982);
+let ageKate = calculateAge(1981);
+
 console.log(getAge);
+console.log(ageJohn);
+console.log(ageKate);
+
+const yearsUntilRetire = (year, firstName) => {
+  let age = calculateAge(year);
+  let retirement = 65 - age;
+  console.log(firstName + " retires in" + " " + retirement + " years");
+};
+
+yearsUntilRetire(1989, "Robbie");
