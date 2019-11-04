@@ -180,6 +180,8 @@ if (JohnAvg > MikeAvg && JohnAvg > MaryAvg) {
   console.log("Go John" + " " + JohnAvg);
 } else if (MikeAvg > JohnAvg && MikeAvg > MaryAvg) {
   console.log("Go Mike" + " " + MikeAvg);
-} else {
+} else  if{
   console.log("Go Mary" + " " + MaryAvg);
+} else {
+    console.log ("There is a draw");
 }
