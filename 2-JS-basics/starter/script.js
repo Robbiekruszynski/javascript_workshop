@@ -180,8 +180,17 @@ if (JohnAvg > MikeAvg && JohnAvg > MaryAvg) {
   console.log("Go John" + " " + JohnAvg);
 } else if (MikeAvg > JohnAvg && MikeAvg > MaryAvg) {
   console.log("Go Mike" + " " + MikeAvg);
-} else  if{
+} else if (MaryAvg > MikeAvg && MaryAvg > MikeAvg) {
   console.log("Go Mary" + " " + MaryAvg);
 } else {
-    console.log ("There is a draw");
+  console.log("There is a draw");
 }
+
+//function work
+
+const calculateAge = birthYear => {
+  return 2019 - birthYear;
+};
+
+let getAge = calculateAge(1989);
+console.log(getAge);
