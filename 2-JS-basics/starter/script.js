@@ -58,9 +58,9 @@ console.log(x);
 
 let markMass, markHeight, markBmi, johnMass, johnHeight, johnBmi, markMore;
 markMass = 20;
-markHeight = 20;
+markHeight = 1.6;
 johnMass = 30;
-johnHeight = 30;
+johnHeight = 2.3;
 markBmi = markMass / (markHeight * markHeight);
 console.log(markBmi);
 johnBmi = johnMass / (johnHeight * johnHeight);
@@ -71,3 +71,14 @@ console.log("Is Mark's BMI higher than John's?" + " " + markMore);
 //to get BMI
 //BMI = mass / height^2 = mass / (height * height);
 //mass in kg and height in meter
+
+//PASSED
+
+let birthName = "Robbie";
+let civilStatus = "married";
+
+if (civilStatus !== "married") {
+  console.log(birthName + " " + "is not married");
+} else {
+  console.log(birthName + " " + "is married");
+}
