@@ -51,3 +51,23 @@ yearRobbie = 30;
 
 let kateOlder = yearKate > yearRobbie;
 console.log(kateOlder);
+
+let x, y;
+x = (3 + 5) * 4 - 6;
+console.log(x);
+
+let markMass, markHeight, markBmi, johnMass, johnHeight, johnBmi, markMore;
+markMass = 20;
+markHeight = 20;
+johnMass = 30;
+johnHeight = 30;
+markBmi = markMass / (markHeight * markHeight);
+console.log(markBmi);
+johnBmi = johnMass / (johnHeight * johnHeight);
+console.log(johnBmi);
+markMore = markBmi > johnBmi;
+console.log("Is Mark's BMI higher than John's?" + " " + markMore);
+
+//to get BMI
+//BMI = mass / height^2 = mass / (height * height);
+//mass in kg and height in meter
