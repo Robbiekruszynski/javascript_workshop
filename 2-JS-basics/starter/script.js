@@ -56,7 +56,7 @@ let x, y;
 x = (3 + 5) * 4 - 6;
 console.log(x);
 
-let markMass, markHeight, markBmi, johnMass, johnHeight, johnBmi, markMore;
+var markMass, markHeight, markBmi, johnMass, johnHeight, johnBmi, markMore;
 markMass = 20;
 markHeight = 1.6;
 johnMass = 30;
@@ -81,4 +81,30 @@ if (civilStatus !== "married") {
   console.log(birthName + " " + "is not married");
 } else {
   console.log(birthName + " " + "is married");
+}
+
+var markMass, markHeight, markBmi, johnMass, johnHeight, johnBmi, markMore;
+markMass = 20;
+markHeight = 1.6;
+johnMass = 30;
+johnHeight = 2.3;
+markBmi = markMass / (markHeight * markHeight);
+johnBmi = johnMass / (johnHeight * johnHeight);
+markMore = markBmi > johnBmi;
+
+if (markBmi > johnBmi) {
+  console.log("Good boy, Mark");
+} else {
+  console.log("Thadda boy, John");
+}
+
+let hisName = "Joe";
+let hisAge = "15";
+
+if (hisAge < 13) {
+  console.log(hisName + " is a boy ");
+} else if (hisAge < 20 && hisAge > 12) {
+  console.log(hisName + " is a teen");
+} else {
+  console.log(hisName + " is an adult");
 }
