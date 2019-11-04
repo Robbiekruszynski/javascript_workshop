@@ -83,6 +83,8 @@ if (civilStatus !== "married") {
   console.log(birthName + " " + "is married");
 }
 
+/////////////////////////////// code challenge #1
+
 var markMass, markHeight, markBmi, johnMass, johnHeight, johnBmi, markMore;
 markMass = 20;
 markHeight = 1.6;
@@ -124,8 +126,60 @@ switch (currentJob) {
   case "teacher":
     console.log(birthCall + " teaches");
     break;
-
   case "driver":
     console.log(birthCall + " drives");
     break;
+  default:
+    console.log(birthCall + " something else");
+    break;
+}
+
+//truthy falsy
+
+let height = 15;
+// let height;
+
+if (height) {
+  console.log("Var is defined");
+} else {
+  console.log("Var has NOT been defined");
+}
+
+/////////////////////////////// code challenge #2
+
+let JohnGameOne,
+  JohnGameTwo,
+  JohnGameThree,
+  MikeGameOne,
+  MikeGameTwo,
+  MikeGameThree,
+  MaryGameOne,
+  MaryGameTwo,
+  MaryGameThree;
+
+JohnGameOne = 989;
+JohnGameTwo = 120;
+JohnGameThree = 103;
+MikeGameOne = 316;
+MikeGameTwo = 94;
+MikeGameThree = 123;
+MaryGameOne = 97;
+MaryGameTwo = 534;
+MaryGameThree = 105;
+
+let JohnAvg = (JohnGameOne + JohnGameTwo + JohnGameThree) / 3;
+console.log(JohnAvg);
+
+let MikeAvg = (MikeGameOne + MikeGameTwo + MikeGameThree) / 3;
+console.log(MikeAvg);
+
+let MaryAvg = (MaryGameOne + MaryGameTwo + MaryGameThree) / 3;
+console.log(MaryAvg);
+
+if (JohnAvg > MikeAvg && JohnAvg > MaryAvg) {
+  console.log("Go John" + " " + JohnAvg);
+} else if (MikeAvg > JohnAvg && MikeAvg > MaryAvg) {
+  console.log("Go Mike" + " " + MikeAvg);
+} else {
+  console.log("Go Mary" + " " + MaryAvg);
 }
