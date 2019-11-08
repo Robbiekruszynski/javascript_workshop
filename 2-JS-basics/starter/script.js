@@ -207,3 +207,38 @@ const yearsUntilRetire = (year, firstName) => {
 };
 
 yearsUntilRetire(1989, "Robbie");
+
+///functions////////////////////////functions///////////////////////////////functions
+
+// function calculateAge(birthYear){
+
+// }
+
+const calculateAging = birthYear => {
+  return 2019 - birthYear;
+};
+
+let ageRobbie = calculateAging(1989);
+let ageKatie = calculateAging(1981);
+let ageJohnny = calculateAging(1982);
+
+console.log(ageRobbie, ageKatie, ageJohnny);
+
+//a function is like a machine that recives some input then does something with that
+//input and returns something else
+
+const yearsUntilRelax = (year, firstName) => {
+  let age = calculateAging(year);
+  let relaxYear = 65 - age;
+  if (relaxYear > 0) {
+    console.log(firstName + " retires in " + relaxYear + " years");
+  } else {
+    console.log(firstName + " you're retired already!");
+  }
+};
+
+yearsUntilRelax(1989, "Robbie");
+yearsUntilRelax(1950, "Bill");
+yearsUntilRelax(1970, "Connor");
+
+////////////////Function Statements and Expressions//////////////////
