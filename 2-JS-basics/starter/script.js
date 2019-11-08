@@ -145,7 +145,7 @@ if (height) {
   console.log("Var has NOT been defined");
 }
 
-/////////////////////////////// code challenge #2
+////////////////////////////code challenge #2/////////////////////////
 
 let JohnGameOne,
   JohnGameTwo,
@@ -242,3 +242,41 @@ yearsUntilRelax(1950, "Bill");
 yearsUntilRelax(1970, "Connor");
 
 ////////////////Function Statements and Expressions//////////////////
+
+//function delcaration
+//function whatDoYouDo(job, firstName) {
+
+//}
+
+//function expression
+var whatDoYouDo = function(job, firstName) {
+  switch (job) {
+    case "teacher":
+      return firstName + " teaches kids how to code";
+    case "driver":
+      return firstName + " is a great driver";
+    case "designer":
+      return firstName + " is a pretty good designer";
+    default:
+      return firstName + " doesn't have a job";
+  }
+};
+
+console.log(whatDoYouDo("teacher", "John"));
+console.log(whatDoYouDo("designer", "Stan"));
+console.log(whatDoYouDo("coder", "Cory"));
+
+////////////////////////arrays/////////////////////////
+
+let differentNames = ["John", "Kate", "Josh", "Robbie"];
+let differentYears = new Array(1989, 1941, 1943, 1984);
+
+
+////Mutate array data/////
+differentNames[3] = "Robbles";
+console.log(differentNames[3], differentYears[0]);
+console.log(differentNames.length);
+console.log(differentNames);
+
+
+//differnet data types 
