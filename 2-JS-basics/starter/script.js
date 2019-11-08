@@ -339,6 +339,7 @@ const tipCalc = (bill) => {
 console.log(tipCalc(10));
 
 let bills = [124, 48, 268];
-let tips = [tipCalc(bills[0]), 
-            tipCalc(bills[1]), 
-            tipCalc(bills[2])];
+let tips = [tipCalc(bills[0]), tipCalc(bills[1]), tipCalc(bills[2])];
+let total = [bills[0] + tips[0],bills[1] + tips[1],bills[2] + tips[2]]
+      
+console.log(tips);
