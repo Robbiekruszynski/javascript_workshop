@@ -83,7 +83,7 @@ if (civilStatus !== "married") {
   console.log(birthName + " " + "is married");
 }
 
-/////////////////////////////// code challenge #1
+/////////////////////////////// code challenge #1//////////////////////////////////////////
 
 var markMass, markHeight, markBmi, johnMass, johnHeight, johnBmi, markMore;
 markMass = 20;
@@ -271,12 +271,65 @@ console.log(whatDoYouDo("coder", "Cory"));
 let differentNames = ["John", "Kate", "Josh", "Robbie"];
 let differentYears = new Array(1989, 1941, 1943, 1984);
 
-
 ////Mutate array data/////
 differentNames[3] = "Robbles";
 console.log(differentNames[3], differentYears[0]);
 console.log(differentNames.length);
 console.log(differentNames);
 
+//differnet data types
 
-//differnet data types 
+let Jill = ["Jack", "Phil", 1990, "designer", false];
+
+//////add to the array, last position
+Jill.push("blue");
+
+//////adds to the first position
+Jill.unshift("Mr.");
+
+//////removes the last element in an Array
+Jill.pop();
+Jill.pop();
+
+//////removes the first position
+Jill.shift();
+
+console.log(Jill);
+
+let isDesigner =
+  Jill.indexOf("designer") === -1
+    ? "John is Not a designer"
+    : "John is a designer";
+console.log(isDesigner);
+
+////////////////////////Coding challenge #3////////////////////////
+
+let bills = [124, 48, 268];
+let withTip =[X,X,X];
+
+// 20% bill < 50
+// 15% bill > 50 && bill < 201
+// 10% bill > 200
+
+// so position 0 = 15%
+//    position 1 = 20%
+//    position 2 = 10%
+
+const tipper = (billing) => {
+  let bill = bills(billing);
+  if (bill < 50){
+    console.log ( " this is a 20% tip");
+  } else if ( bill > 50 && bill < 201){
+  console.log ( " this is a 15% tip");
+  } else (bill > 200){
+    console.log ( " this is a 10% tip");
+  }
+};
+
+
+
+const tipCalc = (amount) => {
+  let tips = [0.2*amount, 0.15*amount, 0.1*amount]
+  let finalBill= [amount + tips[0], amount + tips[1], amount + tips[2]]
+
+
