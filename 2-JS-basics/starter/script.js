@@ -315,31 +315,97 @@ console.log(isDesigner);
 //    position 1 = 20%
 //    position 2 = 10%
 
+// const tipCalc = (bill) => {
+//   let = [
+//   let = []
+//   let percentage;
 
+//  if (bill < 50){
+//    percentage = .2;
+//     console.log ( " this is a 20% tip");
 
-const tipCalc = (bill) => {
-  let = [];
-  let = [];
-  let percentage;
+//   } else if ( bill > 50 && bill < 201){
+//     percentage = .15;
+//     console.log ( " this is a 15% tip");
 
- if (bill < 50){
-   percentage = .2;
-    console.log ( " this is a 20% tip");
+//  } else {
+//     percentage= .1;
+//     console.log ( " this is a 10% tip");
+//   } return percentage * bill;
+// }
 
-  } else if ( bill > 50 && bill < 201){
-    percentage = .15;
-    console.log ( " this is a 15% tip");
+// console.log(tipCalc(10));
 
- } else {
-    percentage= .1;
-    console.log ( " this is a 10% tip");
-  } return percentage * bill;
+// let bills = [124, 48, 268];
+// let tips = [tipCalc(bills[0]), tipCalc(bills[1]), tipCalc(bills[2])];
+// let total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+// console.log(tips);
+
+///////promise work
+
+let p = new Promise((resolve, reject) => {
+  let a = 1 + 3;
+  if (a === 2) {
+    resolve("Success");
+  } else {
+    reject("Failed");
+  }
+});
+
+//anything inside of a .then is going to run for a revolve
+p.then(message => {
+  console.log("this is in the then" + " " + message);
+}).catch(message => {
+  console.log("this is in the catch " + message);
+});
+
+//////callback function //////
+
+const userLeft = false;
+const userRight = false;
+
+function watchCallBack(callback, errorCallback) {
+  if (userLeft) {
+    errorCallback({
+      name: "User Left",
+      message: ":("
+    });
+  } else if (userRight) {
+    errorCallback({
+      name: "User Right",
+      message: ";)"
+    });
+  } else {
+    callback("thumbs up");
+  }
 }
 
-console.log(tipCalc(10));
+watchCallBack(
+  message => {
+    console.log("success" + " " + message);
+  },
+  error => {
+    console.log(error.name + " " + error.message);
+  }
+);
 
-let bills = [124, 48, 268];
-let tips = [tipCalc(bills[0]), tipCalc(bills[1]), tipCalc(bills[2])];
-let total = [bills[0] + tips[0],bills[1] + tips[1],bills[2] + tips[2]]
-      
-console.log(tips);
+///refactor the above code to use a promise instead
+
+function watchCallBackPromise() {
+  return new Promise((res, rej) => {
+    if (userLeft) {
+      reject({
+        name: "User Left",
+        message: ":("
+      });
+    } else if (userRight) {
+      reject({
+        name: "User Right",
+        message: ";)"
+      });
+    } else {
+      resolve("thumbs up");
+    }
+  });
+}
