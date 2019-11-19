@@ -360,52 +360,88 @@ p.then(message => {
   console.log("this is in the catch " + message);
 });
 
-//////callback function //////
+////////////////callback function////////////////
 
 const userLeft = false;
 const userRight = false;
 
-function watchCallBack(callback, errorCallback) {
-  if (userLeft) {
-    errorCallback({
-      name: "User Left",
-      message: ":("
-    });
-  } else if (userRight) {
-    errorCallback({
-      name: "User Right",
-      message: ";)"
-    });
-  } else {
-    callback("thumbs up");
-  }
-}
+// function watchCallBack(callback, errorCallback) {
+//   if (userLeft) {
+//     errorCallback({
+//       name: "User Left",
+//       message: ":("
+//     });
+//   } else if (userRight) {
+//     errorCallback({
+//       name: "User Right",
+//       message: ";)"
+//     });
+//   } else {
+//     callback("thumbs up");
+//   }
+// }
 
-watchCallBack(
-  message => {
-    console.log("success" + " " + message);
-  },
-  error => {
-    console.log(error.name + " " + error.message);
-  }
-);
+// watchCallBack(
+//   message => {
+//     console.log("success" + " " + message);
+//   },
+//   error => {
+//     console.log(error.name + " " + error.message);
+//   }
+// );
 
-///refactor the above code to use a promise instead
+//////////////////refactor the above code to use a promise instead////////////////
 
 function watchCallBackPromise() {
   return new Promise((res, rej) => {
     if (userLeft) {
-      reject({
+      rej({
         name: "User Left",
         message: ":("
       });
     } else if (userRight) {
-      reject({
+      rej({
         name: "User Right",
         message: ";)"
       });
     } else {
-      resolve("thumbs up");
+      res("thumbs up");
     }
   });
 }
+
+watchCallBackPromise()
+  .then(message => {
+    console.log("success: " + message);
+  })
+  .catch(error => {
+    console.log(error.name + " " + error.message);
+  });
+
+//you can shorten reject / resolve to res / rej
+
+//whats nice about using a promise you can can just
+//add .then opposed to "callback hell" which is a
+//wild world of nesting that gets messy
+
+//promise (rej, res) muc more simple way to execute
+
+const studyJavascript = new Promise((res, rej) => {
+  res("Going over Javascript");
+});
+const studyExpress = new Promise((res, rej) => {
+  res("Going over Node and Express");
+});
+
+const studyMongo = new Promise((res, rej) => {
+  res("Going over MongoDB work");
+});
+
+// Promise.race will return as soon as one of the promises are complete
+// opposed to all of them
+//instead of (messages) change to (message) since it is the first
+//one to pass
+
+Promise.all([studyJavascript, studyExpress, studyMongo]).then(messages => {
+  console.log(messages);
+});
