@@ -445,3 +445,40 @@ const studyMongo = new Promise((res, rej) => {
 Promise.all([studyJavascript, studyExpress, studyMongo]).then(messages => {
   console.log(messages);
 });
+
+//how do you add something to the beginning and end of an array
+
+var myArray = ["a", "b", "c", "d"];
+
+myArray.push("end");
+myArray.unshift("start");
+
+console.log(myArray);
+
+// doing this in ES6
+
+var myArray = ["a", "b", "c", "d"];
+
+myArray = ["start", ...myArray, "end"];
+console.log(myArray);
+
+//how do you create a private variable in javascript
+
+function secretVar() {
+  var private = "super secret code";
+  return function() {
+    return private;
+  };
+}
+
+var getPrivateVar = secretVar();
+
+console.log(getPrivateVar());
+
+///fizzbuzz/////
+for (i = 1; i < 101; i++) {
+  if (i % 15 === 0) console.log("Fizzbuzz");
+  else if (i % 5 === 0) console.log("Buzz");
+  else if (i % 3 === 0) console.log("Fizz");
+  else console.log(i);
+}
